@@ -1,0 +1,11 @@
+<div style="text-align:center">
+<h5><b>
+{{searchitems.length}} cakes found for your search
+</b>
+</h5>
+</div>
+<div class="row" style="margin-left: 2em;margin-bottom: 2em;">
+
+<app-cake *ngFor="let eachcake of searchitems" class="col" [cakedata]="eachcake"></app-cake>
+
+</div>

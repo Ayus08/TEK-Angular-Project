@@ -1,0 +1,134 @@
+<div class="bg-warning">
+<div class="container">
+    <form #addressForm="ngForm" (submit)="addressForm.valid && addAddress()">
+      <div class="form-group mt-3">
+        <label for="">Name</label>
+        <input
+          name="name"
+          required
+          #name="ngModel"
+          [(ngModel)]="userdetails.name"
+          type="text"
+          class="form-control"
+        />
+        <div style="color: red" *ngIf="addressForm.submitted && name.errors">
+          <label *ngIf="name.errors['required']">Name is Required</label>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <label for="">Address</label>
+        <input
+          name="address"
+          required
+          #address="ngModel"
+          [(ngModel)]="userdetails.address"
+          type="text"
+          class="form-control"
+        />
+        <div style="color: red" *ngIf="addressForm.submitted && address.errors">
+          <label *ngIf="address.errors['required']">Address is Required</label>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <label for="">City</label>
+        <input
+          name="city"
+          required
+          #city="ngModel"
+          [(ngModel)]="userdetails.city"
+          type="text"
+          class="form-control"
+        />
+        <div style="color: red" *ngIf="addressForm.submitted && city.errors">
+          <label *ngIf="city.errors['required']">City is Required</label>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <label for="">Pincode</label>
+        <input
+          name="pincode"
+          required
+          #pincode="ngModel"
+          [(ngModel)]="userdetails.pincode"
+          type="text"
+          class="form-control"
+        />
+        <div style="color: red" *ngIf="addressForm.submitted && pincode.errors">
+          <label *ngIf="pincode.errors['required']">Pincode is Required</label>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <label for="">Phone</label>
+        <input
+          name="phone"
+          required
+          #phone="ngModel"
+          [(ngModel)]="userdetails.phone"
+          type="text"
+          class="form-control"
+        />
+        <div style="color: red" *ngIf="addressForm.submitted && phone.errors">
+          <label *ngIf="phone.errors['required']">Phone No. is Required</label>
+        </div>
+      </div>
+      <div class="form-group mt-3" style="text-align: center;">
+        <button
+          class="btn btn-primary"
+          (click)="addAddress()"
+          routerLink="/checkout/payment"
+        >
+          Add Address
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!--
+<div class="container">
+    <form #addressForm="ngForm" (submit)="addressForm.valid && addAddress()">
+    <div class="form-group mt-3">
+        <label for="">Name</label>
+        <input #ayush="ngModel" name="name" required [(ngModel)]="userdetails.name" type="text" class="form-control">
+        <div style="color:red;" *ngIf="addressForm.submitted && ayush.errors">
+            <label *ngIf="ayush.errors['required']">Name is required</label>
+
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="">Address</label>
+        <input name="address" [(ngModel)]="userdetails.address" type="text" class="form-control">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="">City</label>
+        <input name="city" [(ngModel)]="userdetails.city" type="text" class="form-control">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="">Pincode</label>
+        <input name="pincode" [(ngModel)]="userdetails.pincode" type="text" class="form-control">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="">Phone</label>
+        <input name="phone" [(ngModel)]="userdetails.phone" type="text" class="form-control">
+    </div>
+
+    <div class="form-group mt-3">
+    <button (click)="addAddress()" routerLink="/checkout/payment" class="btn btn-primary">Add Address</button>    
+    </div>
+</form>
+</div>
+-->

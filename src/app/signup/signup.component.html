@@ -1,0 +1,55 @@
+<!--2-way data binding-->
+<div class="bg-danger" style="height: 555px;">
+<!-- <div class="mt-5 mb-5"> -->
+  <br><br><br>
+<form style="width:50%; margin:auto; background-color:#fafab8">
+  <div style = "width: 50%; margin: auto;">
+    <h1>Sign Up</h1>
+  <div *ngIf="responseError" class="form-group mt-3">
+
+    <label class="alert alert-danger">{{responseError}}</label>
+
+</div>
+    <div class="form-group mt-3">
+    <label for="inputname" class="form-label">Name</label>
+    <input name="fullname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name.." [(ngModel)]="userdetails.name">
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input name = "email" [(ngModel)]="userdetails.email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input name = "password" [(ngModel)]="userdetails.password" type="password" class="form-control" id="exampleFormControlInput1">
+  </div>
+<div class="form-group mt-3" style="text-align: center;">
+  <button (click)="signup()" type="submit" class="btn btn-primary">Sign Up</button>
+</div>
+<br>
+</div>
+</form>
+<!--
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let eachuser of users ; let i = index">
+        <td>{{eachuser.name}}</td>
+        <td>{{eachuser.email}}</td>
+        <td>{{eachuser.password}}</td>
+        <td><button (click)="deleteUser(i)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  -->
+<!-- </div> -->
+  <!--this.fullname, this.email, this.password-->
+</div>
